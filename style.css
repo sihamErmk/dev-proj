@@ -1,0 +1,455 @@
+User
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+@media screen and (max-width: 768px) {
+    .context {
+        top: 20vh;
+    }
+
+    .context .welcome-text,
+    .context .sub-texte,
+    .context button {
+        left: 0;
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+}
+
+.context {
+    width: 100%;
+    position: absolute;
+    top: 50vh;
+}
+
+.context h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.area {
+    background: #020c24;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 100vh;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(114, 141, 228, 0.663);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+/* navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 10px 0;
+    right: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: #1c3555;
+}
+
+.navbar .max-width img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.navbar .logo {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: baseline; /* Align items to the baseline */
+    justify-content:flex-end;
+    padding-bottom: 10px;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 15px;
+    margin-left:80px;
+    
+    
+    
+
+    
+}
+.logo .kode-mono {
+    font-family: 'Kode Mono', monospace;
+    font-weight: 700;
+    max-width: 90%;
+}
+
+
+/*.welcome-text  {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}*/
+
+  
+
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    order: 1;
+}
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+    order: 2;
+    margin-left: 190px;
+    
+    
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    margin-left: 50px;
+}
+.navbar .menu li a {
+    
+    
+    right: 0;
+    display: block;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color:#fdf616;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+
+.navbar .menu li button {
+    margin-left: 80px;
+    margin-top:20px;
+    padding-left:14px; 
+    padding-right:14px;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+   
+    background-color:rgb(3, 51, 164);
+    /* Ajustez la valeur de la marge selon vos préférences */
+}
+
+/* Add this to your existing CSS */
+
+/* Add this to your existing CSS */
+
+.navbar .max-width {
+    position: relative;
+}
+
+.navbar .max-width img {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; /* Set the width as desired */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adjust the margin as needed */
+    border-radius: 50%; /* Optional: Apply border-radius for a circular shape */
+    z-index: -1; /* Move the image behind other elements */
+}
+
+.navbar .logo {
+    position: relative;
+    z-index: 1; /* Ensure the text is above the image */
+}
+
+
+
+/* menu btn styling */
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background:#013376;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+   /* ... (your existing CSS) */
+
+/*.context {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px; 
+}
+
+.welcome-text {
+    font-size: 30px;
+    font-family: "Yatra One";
+    font-weight: 800;
+    color: azure;
+}
+
+.sub-texte {
+    font-size: 20px;
+    color: azure;
+    font-family: "Caveat", cursive;
+    font-weight: normal;
+}
+
+.btn-primary {
+    background-color: rgb(3, 51, 164);
+    padding: 8px 18px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%
+  }
+  .image {
+    flex-basis: 40%
+   
+  }*/
+  .context {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    top: 150px;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 700px;
+    text-align: left; /* Adjust text alignment as needed */
+}
+
+
+
+.welcome-text {
+    font-size: 30px;
+    font-family: "Yatra One";
+    font-weight: 800;
+    color: azure;
+}
+
+.sub-texte {
+    font-size: 20px;
+    color: azure;
+    font-family: "Caveat", cursive;
+    font-weight: normal;
+}
+
+.btn-primary {
+    background-color: rgb(3, 51, 164);
+    padding: 8px 18px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.image {
+    flex: 1;
+    text-align: left;
+    width: 600px;
+    height: 400px;
+}
+
+.player {
+    max-width: 100%; 
+    height: auto;
+    margin-left: 1000px; 
+    
+}
+
+
+
+
